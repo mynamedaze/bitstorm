@@ -1,0 +1,265 @@
+.important {
+  overflow: hidden;
+  @media #{$min-tablet-width} {
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-image: url("/img/important__bg--tablet.png");
+    padding-top: 69px;
+    padding-bottom: 102px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: -170px;
+    background-image: url("/img/important__bg--desktop.png");
+    padding-top: 206px;
+    padding-bottom: 103px;
+  }
+}
+
+.important__wrapper {
+  position: relative;
+  z-index: 3;
+  @media #{$min-tablet-width} {
+    width: 646px;
+    @include centers;
+  }
+  @media #{$min-desktop-width} {
+    width: 808px;
+  }
+  &::after {
+    @media #{$min-tablet-width} {
+      position: absolute;
+      content: "";
+      z-index: 3;
+      right: -70px;
+      bottom: 37px;
+      width: 120px;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/img/dots--tablet.png");
+    }
+    @media #{$min-desktop-width} {
+      width: 150px;
+      height: 150px;
+      right: -83px;
+      bottom: -17px;
+      background-image: url("/img/dots--desktop.png");
+    }
+  }
+}
+
+.important__inner {
+  position: relative;
+  z-index: 4;
+  @media #{$min-tablet-width} {
+    padding: 5px;
+    background: rgb(98, 186, 225);
+    background: -moz-linear-gradient(-45deg, rgba(98, 186, 225, 1) 0%, rgba(171, 236, 253, 1) 50%, rgba(98, 186, 225, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(98, 186, 225, 1) 0%, rgba(171, 236, 253, 1) 50%, rgba(98, 186, 225, 1) 100%);
+    background: linear-gradient(135deg, rgba(98, 186, 225, 1) 0%, rgba(171, 236, 253, 1) 50%, rgba(98, 186, 225, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62bae1', endColorstr='#62bae1', GradientType=1);
+    border-radius: 14px;
+    box-shadow: 7px 20px 30px 0 rgba(0, 70, 77, 0.4);
+  }
+  @media #{$min-desktop-width} {
+    border-radius: 18px;
+    padding: 6px;
+  }
+}
+
+.important__content {
+  background: url("/img/pattern__noise.png"), #fff;
+  @media #{$max-mobile-width} {
+    padding-top: 28px;
+    padding-bottom: 41px;
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 3;
+    border-radius: 10px;
+    padding-left: 46px;
+    padding-right: 46px;
+    padding-top: 39px;
+    padding-bottom: 33px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 49px;
+    padding-bottom: 54px;
+    border-radius: 12px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    @media #{$min-tablet-width} {
+      left: 8px;
+      bottom: 8px;
+      width: 12px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/img/gaika.png");
+    }
+    @media #{$min-desktop-width} {
+      bottom: 12px;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    @media #{$min-tablet-width} {
+      right: 8px;
+      bottom: 8px;
+      width: 12px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/img/gaika.png");
+    }
+    @media #{$min-desktop-width} {
+      bottom: 12px;
+      right: 12px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.important__tech-field {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  &::before {
+    @media #{$min-tablet-width} {
+      position: absolute;
+      content: "";
+      left: 8px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/img/gaika.png");
+    }
+    @media #{$min-desktop-width} {
+      bottom: 12px;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &::after {
+    @media #{$min-tablet-width} {
+      position: absolute;
+      content: "";
+      right: 8px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/img/gaika.png");
+    }
+    @media #{$min-desktop-width} {
+      bottom: 12px;
+      right: 12px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.important__title {
+  margin-top: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  @media #{$max-mobile-width} {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 2rem;
+    margin-bottom: 11px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 3.3rem;
+    margin-bottom: 15px;
+  }
+}
+
+.important__paragraph {
+  text-align: center;
+  @media #{$max-mobile-width} {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    max-width: $max-mobile-wrapper;
+    @include centers;
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-top: 7px;
+  }
+}
+
+.important__kp-download-btn {
+  display: block;
+  @include main-btn;
+  @include centers;
+  box-shadow: 0 0 0 0 rgba(223, 223, 223, 0.5);
+  text-align: center;
+  color: $text-main-color;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    width: 300px;
+    min-height: 5.6rem;
+    font-size: 1.5rem;
+    margin-top: 43px;
+    padding-top: 2rem;
+  }
+  @media #{$min-tablet-width} {
+    width: 250px;
+    min-height: 4.2rem;
+    font-size: 1.2rem;
+    margin-top: 35px;
+    padding-top: 1.5rem;
+  }
+  @media #{$min-desktop-width} {
+    width: 382px;
+    min-height: 6.2rem;
+    font-size: 1.8rem;
+    margin-top: 50px;
+    padding-top: 2.2rem;
+  }
+  &:hover {
+    box-shadow: 0 0 0 5px rgba(223, 223, 223, 0.5);
+  }
+  &:active {
+    box-shadow: 0 0 5px 10px rgba(223, 223, 223, 0.5);
+  }
+}

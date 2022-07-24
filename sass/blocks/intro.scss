@@ -1,0 +1,267 @@
+.intro {
+  min-height: 400px;
+  position: relative;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  @media #{$max-mobile-width} {
+    background-image: url("/img/bg__intro--mobile.png");
+    margin-top: -62px;
+    padding-top: 62px;
+    padding-bottom: 52px;
+  }
+  @media #{$min-tablet-width} {
+    background-image: url("/img/bg__intro--tablet.png");
+    margin-top: -64px;
+    padding-top: 83px;
+    padding-bottom: 50px;
+  }
+  @media #{$min-desktop-width} {
+    background-image: url("/img/bg__intro--desktop.png");
+    margin-top: -94px;
+    padding-top: 123px;
+    padding-bottom: 73px;
+  }
+}
+.intro__wrapper {
+  @include section-width;
+  @include paddings--no-mobile;
+}
+.intro__title {
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  @include centers;
+  @media #{$max-mobile-width} {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    background-color: $title-bg;
+    padding-top: 8px;
+    padding-bottom: 9px;
+  }
+  @media #{$min-tablet-width} {
+    filter: drop-shadow(0 6px 27px rgba(0, 0, 0, 0.3));
+    font-size: 2.2rem;
+    line-height: 3rem;
+    width: 664px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("/img/intro__title--tablet.png");
+    height: 8.5rem;
+    padding-top: 15px;
+  }
+  @media #{$min-desktop-width} {
+    background-image: url("/img/intro__title--desktop.png");
+    font-size: 3.6rem;
+    line-height: 5rem;
+    width: 1060px;
+    height: 13.8rem;
+    padding-top: 22px;
+  }
+}
+.intro__video-wrapper {
+  position: relative;
+  @media #{$max-mobile-width} {
+    border-top: 3px solid #f0fafa;
+    border-bottom: 3px solid #cffbff;
+  }
+  @media #{$min-tablet-width} {
+    @include centers;
+    width: 462px;
+    height: 257px;
+    border-radius: 12px;
+    background: rgb(207,250,255);
+background: -moz-linear-gradient(45deg, rgba(207,250,255,1) 0%, rgba(249,249,249,1) 100%);
+background: -webkit-linear-gradient(45deg, rgba(207,250,255,1) 0%,rgba(249,249,249,1) 100%);
+background: linear-gradient(45deg, rgba(207,250,255,1) 0%,rgba(249,249,249,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cffaff', endColorstr='#f9f9f9',GradientType=1 );
+margin-top: 19px;
+  }
+  @media #{$min-desktop-width} {
+    width: 766px;
+    height: 432px;
+    margin-top: 40px;
+  }
+}
+.intro__layer-field {
+  z-index: 3;
+  @media #{$max-mobile-width} {
+    position: relative;
+    font-size: 0;
+  }
+  @media #{$min-tablet-width} {
+    overflow: hidden;
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/intro__video-layer--tablet.jpg");
+  }
+  @media #{$min-desktop-width} {
+    left: 7px;
+    right: 7px;
+    top: 7px;
+    bottom: 7px;
+    background-image: url("/img/intro__video-layer--desktop.jpg");
+  }
+}
+.intro__layer-img {
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+}
+.intro__play-btn-field {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro__play-btn {
+  border-radius: 50%;
+  @include main-btn;
+  @media #{$max-mobile-width} {
+    width: 46px;
+    height: 46px;
+  }
+  @media #{$min-tablet-width} {
+    width: 52px;
+    height: 52px;
+  }
+  @media #{$min-desktop-width} {
+    width: 86px;
+    height: 86px;
+  }
+}
+.intro__play-btn-text {
+  display: block;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/button_arrow.svg");
+  width: 100%;
+  height: 100%;
+  @media #{$max-mobile-width} {
+    background-size: 15px 13px;
+    transform: translateX(1px);
+  }
+  @media #{$min-tablet-width} {
+    background-size: 15px 18px;
+    transform: translateX(1px);
+  }
+  @media #{$min-desktop-width} {
+    background-size: 24px 28px;
+    transform: translateX(3px);
+  }
+}
+.intro__play-text {
+  text-align: center;
+  @media #{$max-mobile-width} {
+    font-size: 1.3rem;
+    margin-top: 8px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-top: 8px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+    margin-top: 12px;
+  }
+}
+.intro__video-field {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  @media #{$max-mobile-width} {
+    width: 100%;
+    height: 99%;
+  }
+  @media #{$min-tablet-width} {
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 10px;
+  }
+  @media #{$min-desktop-width} {
+    left: 7px;
+    right: 7px;
+    top: 7px;
+    bottom: 7px;
+  }
+}
+#video {
+  width: 100%;
+  height: 100%;
+}
+.intro__raschet-btn-field {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 300px;
+    margin-top: 40px;
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+  @media #{$min-tablet-width} {
+    width: 294px;
+    margin-top: 33px;
+  }
+  @media #{$min-desktop-width} {
+    width: 466px;
+    margin-top: 59px;
+  }
+}
+.intro__raschet-btn {
+  @include main-btn;
+  display: block;
+  width: 100%;
+  @media #{$max-mobile-width} {
+    min-height: 4.8rem;
+    font-size: 1.3rem;
+  }
+  @media #{$min-tablet-width} {
+    box-shadow: 0 7px 33px 0 rgba(72, 56, 0, 0.3);
+    min-height: 4.6rem;
+    font-size: 1.4rem;
+  }
+  @media #{$min-desktop-width} {
+    min-height: 7.5rem;
+    font-size: 2.1rem;
+  }
+  &::after {
+    @media #{$min-tablet-width} {
+      left: 4px;
+      top: 4px;
+      right: 4px;
+      bottom: 4px; 
+    }
+    @media #{$min-desktop-width} {
+      left: 6px;
+      top: 6px;
+      right: 6px;
+      bottom: 6px;
+    }
+  }
+}
+.intro__raschet-btn-text {
+  @include main-btn-arrow;
+}
